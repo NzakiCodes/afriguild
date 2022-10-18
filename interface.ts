@@ -1,6 +1,9 @@
-export interface ITopPlayer {
+export interface IPlayer {
+  id?:number;
   name: string;
-  handle:string;
+  handle: string;
   image: string;
   points: number;
+  isRankingHigh?: boolean;
+  isRankingLow?:boolean;
 }

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { topPlayerList } from "../../topPlayerList";
+import { playerList } from "../../topPlayerList";
 import LiveRanking from "../LiveRanking";
 import TopPlayer from "../TopPlayer";
 
@@ -20,7 +20,7 @@ function LeaderBoard() {
         <div className="top-players-container">
           <h2>Top players on Afriguild this week</h2>
           <div className="top-players-list">
-            {topPlayerList.map((player, i) => (
+            {playerList.map((player, i) => (
               <TopPlayer
                 handle={player.handle}
                 key={i}
@@ -32,6 +32,9 @@ function LeaderBoard() {
           </div>
         </div>
         <LiveRanking />
+      </div>
+      <div className="leaderboard-blank">
+
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { ITopPlayer } from "../../interface";
+import { IPlayer } from "../../interface";
 
-const TopPlayer = ({ name, image, handle, points }: ITopPlayer) => {
+const TopPlayer = ({ name, image, handle, points }: IPlayer) => {
   return (
     <div className="top-player">
       <div className="avatar">

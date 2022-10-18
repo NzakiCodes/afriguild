@@ -11,7 +11,22 @@ body {
   background: #24272c;
   color: #ffffff;
 }
+body::-webkit-scrollbar {
+  width: 5px;
+  margin: 100px;
+}
 
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #000000;
+  box-shadow: inset 0 0 6px #000000;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #322f32;
+  outline: 4px solid #322f32;
+  width: 8px;
+  border-radius: 8px;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -28,21 +43,16 @@ a {
   color: white;
 }
 
-.w-full {
-  width: 100%;
+button {
+  cursor: pointer;
 }
-
-.flex {
-  display: flex;
-}
-.justify-between {
-  justify-content: space-between;
-}
-
 /* Navbar */
 .navbar {
   padding: 42.35px 50.7px;
   background: #24272c;
+  width: 100%;
+  position: fixed;
+  z-index: 50;
 }
 .home-links-search-section {
   display: flex;
@@ -100,30 +110,39 @@ a {
 /* Leaderboard */
 .leaderboard-container {
   display: flex;
+  justify-content: space-between;
+
+  margin-top: 5px;
+  padding-top: 10px;
+  margin: 0 55px;
+  padding-left: 55px;
+  /* gap: 20px ; */
 }
 .leaderboard {
-  margin-top: 10px;
-  padding-top: 20px;
-  margin-left: 55px;
-  padding-left: 55px;
   width: 60%;
+}
+.leaderboard-blank {
+  background: #1e1c1e;
+  border-radius: 26px;
+  width: 35%;
 }
 .leaderboard .heading {
   display: flex;
   max-height: 35px;
   align-items: center;
-  margin-bottom: 52px;
+  margin-bottom: 30px;
   gap: 35px;
 }
 .leaderboard h1 {
-  margin: 25px 0;
+  margin: 20px 0;
   font-weight: 700;
 }
 .top-players-list {
   display: flex;
   justify-content: space-between;
-  gap: 45px;
+  gap: 20px;
   margin: 31px 0;
+  max-width: 100%;
 }
 .top-players-list h2 {
   font-weight: 700;
@@ -156,12 +175,149 @@ a {
   justify-content: space-between;
   margin-top: 7px;
 }
-.top-player .meta .handle{
+.top-player .meta .handle {
   font-weight: 700;
   font-size: 18px;
   font-style: italic;
 }
 
-.live-ranking-container{
-  
+/* Live Ranking */
+
+.live-ranking-container {
+  background: #1e1c1e;
+  width: 100%;
+  padding: 28px 36px;
+  margin: 48px 0;
+  border-radius: 8px;
+  border-top: 3px solid var(--primary);
+}
+.live-ranking-heading {
+  border-bottom: 2px solid #7b7b7b;
+  margin-bottom: 20px;
+  width: 100% !important;
+}
+.live-ranking-heading h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31px;
+}
+
+.live-ranking-heading {
+  width: 683px;
+}
+
+.live-ranking-container .description span {
+  font-size: 14px;
+}
+.live-ranking-container .description span:first-child {
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.live-ranking-container .description span:last-child {
+  font-weight: 700;
+  display: inline-block;
+  font-style: italic;
+}
+.live-ranking-container .description button {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  background: transparent;
+  border-radius: 9999px;
+  padding: 10px 13px;
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+  margin: 24px 0;
+  transition: all 0.3s;
+}
+.live-ranking-container .description button:hover {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.live-ranking-list-container {
+  max-height: 514.5px;
+  overflow: auto;
+}
+
+.live-ranking-list-container > div:nth-child(2),
+.live-ranking-list-container .description {
+  width: 90%;
+}
+
+.live-ranking-list-container::-webkit-scrollbar {
+  width: 5px;
+  margin: 100px;
+}
+
+.live-ranking-list-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #000000;
+  box-shadow: inset 0 0 6px #000000;
+}
+
+.live-ranking-list-container::-webkit-scrollbar-thumb {
+  background-color: #322f32;
+  outline: 2px solid #322f32;
+  width: 6px;
+  border-radius: 8px;
+}
+.live-ranking-list {
+  list-style-type: none;
+  padding: 10px 30px;
+}
+.live-ranking-list-item {
+  display: flex;
+  align-items: center;
+  margin: 9px 0;
+}
+.list-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #191616;
+  padding: 15px 13px 15px 29px;
+  margin: 5px 15px;
+  border-radius: 15px;
+}
+.player-details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.player-details .meta {
+  padding: 0 12px;
+}
+.player-details .meta h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+.player-details .meta span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #c4c4c4;
+}
+.list-card .points {
+  background: rgba(255, 238, 89, 0.1);
+  padding: 8px 20px;
+  border-radius: 15px;
+  font-weight: 300;
+  font-size: 24px;
+}
+.list-card .points span {
+  font-size: 14px;
+}
+
+.live-ranking-list-item .id {
+  background: #191616;
+  padding: 8px 6px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  margin-left: 8px;
 }

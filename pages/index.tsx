@@ -15,6 +15,7 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <Navbar />  
+        <div style={{height:"135px"}}/>
         <LeaderBoard/>
       </main>
     </div>
