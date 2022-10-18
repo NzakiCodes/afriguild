@@ -2,8 +2,8 @@ import { IPlayer } from "./interface";
 
 export const playerList: IPlayer[] = [
   {
-    name: "Nzaki",
-    handle: "Saintino",
+    name: "Pere",
+    handle: "pere22",
     image: "player-1.png",
     points: 650,
     isRankingHigh: true,
@@ -11,14 +11,14 @@ export const playerList: IPlayer[] = [
   },
   {
     name: "Nzaki",
-    handle: "Saintino",
+    handle: "nzaki",
     image: "player-2.png",
     points: 550,
     isRankingHigh: true,
     isRankingLow: false,
   },
   {
-    name: "Nzaki",
+    name: "Santino",
     handle: "Saintino",
     image: "player-3.png",
     points: 445,

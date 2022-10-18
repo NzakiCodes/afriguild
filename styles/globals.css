@@ -198,6 +198,9 @@ button {
   border-top: 3px solid var(--primary);
 }
 .live-ranking-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 2px solid #7b7b7b;
   margin-bottom: 20px;
   width: 100% !important;
@@ -330,6 +333,31 @@ button {
   border-radius: 9999px;
   margin-left: 8px;
 }
-.ranking-filter-container{
+.ranking-filter-container {
   background: rgba(244, 6, 143, 0.502);
+  height: 35px;
+  border-radius: 10px;
+  display: flex;
+}
+.ranking-filter-container .button {
+  height: 100%;
+  border: none;
+  outline: 0;
+  border-radius: 10px;
+  background: transparent;
+  width: max-content;
+  min-width: 47px;
+  text-align: center;
+  padding: 0 25px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 12px;
+}
+.ranking-filter-container .button:hover{
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+.ranking-filter-container .button.selected {
+  background: var(--primary);
+  transition: all 0.3s;
 }
