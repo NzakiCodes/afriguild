@@ -81,7 +81,7 @@ button {
 }
 
 .search-container {
-  width: 37%;
+  width: 40%;
 }
 .search-container input {
   width: 100%;
@@ -111,15 +111,16 @@ button {
 .leaderboard-container {
   display: flex;
   justify-content: space-between;
-
+  overflow: hidden;
   margin-top: 5px;
   padding-top: 10px;
-  margin: 0 55px;
+  margin: 0 50px;
   padding-left: 55px;
   /* gap: 20px ; */
 }
 .leaderboard {
-  width: 60%;
+  width: 62%;
+  overflow: hidden;
 }
 .leaderboard-blank {
   background: #1e1c1e;
@@ -140,7 +141,7 @@ button {
 .top-players-list {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 17px;
   margin: 31px 0;
   max-width: 100%;
 }
@@ -243,7 +244,7 @@ button {
 
 .live-ranking-list-container > div:nth-child(2),
 .live-ranking-list-container .description {
-  width: 90%;
+  width: 95%;
 }
 
 .live-ranking-list-container::-webkit-scrollbar {
