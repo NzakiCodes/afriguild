@@ -401,3 +401,92 @@ button {
   background: var(--primary);
   transition: all 0.3s;
 }
+
+
+@media only screen and (max-width: 768px) {
+  .leaderboard, .leaderboard-blank{
+    width: 100%;
+
+  }
+  .leaderboard-container {
+    flex-direction: column;
+    padding-left: 5px;
+    margin: 25px;
+  }
+  .live-ranking-heading{
+    flex-direction: column;
+    padding-bottom: 10px;
+    max-width: 200px;
+    width: 200px;
+    margin: 0 auto;
+  }
+  .navbar{
+    flex-direction: column;
+    padding: 30px;
+  }
+  .home-links-search-section {
+    width: 100%;
+    gap: 10px;
+    flex-direction: column;
+  }
+  .my-area{
+    display: none;
+  }
+  .logo {
+    width: 50%;
+  }
+  .nav-links{
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-link{
+    font-size: 12px;
+  }
+  .search-container{
+    width: 100%;
+  }
+  .search-container input{
+
+  }
+  .leaderboard .heading{
+    flex-direction: column;
+    max-height: none;
+    gap: 5px;
+    margin-bottom: 40px;
+  }
+  .leaderboard .heading h1{
+    /* font-size: 16px; */
+  }
+  .top-players-container h2{
+    font-size: 1.25em;
+    text-align: center;
+  }
+  .live-ranking-container{
+    padding: 10px 10px;
+  }
+  .live-ranking-list{
+    padding: 5px 10px;
+  }
+  .list-card{
+    margin: 0;
+    padding: 2px 5px;
+  }
+  
+
+.list-card .points{
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  .list-card .points span{
+    font-size: 10px;
+  }
+  .live-ranking-list-container .description{
+    
+  }
+  .live-ranking-list-container .description {
+    padding: 10px;
+  }
+  .leaderboard-container{
+    padding: 0;
+  }
+}
