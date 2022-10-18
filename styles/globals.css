@@ -469,7 +469,7 @@ button {
   }
   .list-card{
     margin: 0;
-    padding: 2px 5px;
+    padding: 5px 10px;
   }
   
 
@@ -480,13 +480,20 @@ button {
   .list-card .points span{
     font-size: 10px;
   }
-  .live-ranking-list-container .description{
-    
+  .player-details .meta h4{
+    font-size: 16px;
+  }
+  .player-details .meta span{
+    font-size: 12px;
   }
   .live-ranking-list-container .description {
     padding: 10px;
   }
   .leaderboard-container{
     padding: 0;
+  }
+  .player-details img{
+    width: 30px!important;
+    height: 30px!important;
   }
 }
