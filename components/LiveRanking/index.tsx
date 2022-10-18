@@ -7,7 +7,7 @@ function LiveRanking() {
     <div className="live-ranking-container">
       <div className="live-ranking-heading">
         <h2>Live ranking</h2>
-        <div className=""></div>
+        <div className="ranking-filter-container"></div>
       </div>
       <div className="live-ranking-list-container">
        <div className="description">

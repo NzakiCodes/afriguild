@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import NavLink from "../NavLink";
 
 function Navbar() {
   return (
@@ -31,15 +31,6 @@ function Navbar() {
   );
 }
 
-interface INavLink {
-  link: string;
-  text: string;
-  isActive: boolean;
-}
-const NavLink = ({ link, text, isActive }: INavLink) => (
-  <Link href={link}>
-    <a className={`${isActive ? "active" : "text-white"} nav-link`}>{text}</a>
-  </Link>
-);
+
 
 export default Navbar;
